@@ -1,0 +1,75 @@
+package StepDefinitions;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.cucumber.java.en.*;
+
+public class Compose {
+	
+	WebDriver driver = null;
+	
+	
+	
+	
+	@Given("User is on gmail login page")
+	public void user_is_on_gmail_login_page() {
+             System.setProperty("webdriver.chrome.driver", "F:/Test/Automation/src/test/resources/drivers/chromedriver.exe");
+             driver = new ChromeDriver();
+          
+             driver.manage().window().maximize();
+             
+             driver.navigate().to("https://www.gmail.com");
+             
+             
+	}
+
+	@And("user enters username and password")
+	public void user_enters_username_and_password() {
+	   driver.findElement(By.xpath("//input[@type='email']")).sendKeys("sandeep.infosel@gmail.com");
+	   driver.findElement(By.xpath("//div[@class='VfPpkd-RLmnJb']")).click();
+	   driver.findElement(By.xpath("//input[@type='password']")).sendKeys("sandeep.infosel@gmail.com");
+	   driver.findElement(By.xpath("//input[@type='password']")).sendKeys(Keys.ENTER);
+	}
+
+	@And("clicks on login button")
+	public void clicks_on_login_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@And("user able to see gmail homepage")
+	public void user_able_to_see_gmail_homepage() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("User clicks on compose button")
+	public void user_clicks_on_compose_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User able to New message pop-up")
+	public void user_able_to_new_message_pop_up() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("enter all relevent data in the fields")
+	public void enter_all_relevent_data_in_the_fields() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("clicks on send button")
+	public void clicks_on_send_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}
