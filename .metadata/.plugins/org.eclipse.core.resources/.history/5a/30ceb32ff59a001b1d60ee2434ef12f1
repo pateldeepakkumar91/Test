@@ -30,7 +30,7 @@ public class Compose {
 
 	@Given("user enters username and clicks on next button")
 	public void user_enters_username_and_clicks_on_next_button() throws InterruptedException {
-		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("email id");
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("sandeep.infosel@gmail.com");
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
 
@@ -38,7 +38,7 @@ public class Compose {
 
 	@Given("user enters password and clicks on next button")
 	public void user_enters_password_and_clicks_on_next_button() {
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("password");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("pr@chinaik@123");
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys(Keys.ENTER);
 	}
 
@@ -65,7 +65,7 @@ public class Compose {
 
 	@Then("enter all relevent data in the fields")
 	public void enter_all_relevent_data_in_the_fields() {
-		driver.findElement(By.xpath("//textarea[@name='to']")).sendKeys("Receiver email id");
+		driver.findElement(By.xpath("//textarea[@name='to']")).sendKeys("mail");
 		driver.findElement(By.xpath("//div[@class='Am Al editable LW-avf tS-tW']")).sendKeys("Hello World");
 
 	}
